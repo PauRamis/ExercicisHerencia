@@ -67,7 +67,7 @@ public class Ex3 {
         public toString(){
             return "rectangle with width" + this.with +
                     "and lenght" + this.lenght +
-                    "with a sublas of " super.toString();
+                    "with a sublas of " + super.toString();
         }
     }
 }
