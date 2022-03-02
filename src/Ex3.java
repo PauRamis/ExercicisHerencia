@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class Ex3 {
     public class shape{
         private boolean filled = true;
@@ -27,7 +29,7 @@ public class Ex3 {
             return "Shape with color of " +
                     this.color +
                     "and" +
-                    (this.filled ? filled);
+                   (this.filled ? filled);
         }
     }
 
@@ -68,6 +70,36 @@ public class Ex3 {
             return "rectangle with width" + this.with +
                     "and lenght" + this.lenght +
                     "with a sublas of " + super.toString();
+        }
+    }
+    public class Square extends Rectangle {
+
+        public Square(double side) {
+            super(side, side);
+
+        }
+
+        public Square(double side, String color, boolean filled) {
+            super(side, side, color, filled);
+        }
+
+        public double getSide() {
+            return this.getWidth();
+        }
+
+        public void setSide(double side){
+            this.setWidth(side);
+        }
+
+        @Override
+        public void setWidth(double width) {
+            super.setWidth(width);
+            super.setLength(width);
+        }
+
+        @Override
+        public void setLength(double length){
+            this.setWidth(length);
         }
     }
 }
